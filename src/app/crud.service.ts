@@ -6,7 +6,7 @@ import 'rxjs/add/observable/throw';
 
 import { CrudOperations } from './crud-operations.interface';
 
-export class CrudService<T, ID> implements CrudOperations<T, ID> {
+export abstract class CrudService<T, ID> implements CrudOperations<T, ID> {
 
   protected base: string;
   protected http: Http;
