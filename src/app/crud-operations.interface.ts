@@ -1,6 +1,6 @@
 import { Response } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
-import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Observable';
+
 
 export interface CrudOperations<T, ID> {
 	save(t: T): Observable<T>;
