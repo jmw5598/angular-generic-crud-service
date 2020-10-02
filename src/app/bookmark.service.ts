@@ -3,11 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Bookmark } from './bookmark.model';
 import { CrudService } from './crud.service';
 
-@Injectable()
+import { environment } from '../environments/environment';
+
+@Injectable({
+  providedIn: 'root',
+})
 export class BookmarkService extends CrudService<Bookmark, number> {
 
   constructor(protected _http: HttpClient) {
-    super(_http, "http://localhost:8080/api/bookmark");
+    super(_http, `${environment.api.baseUrl}/bookmarks`);
   }
 
 }
